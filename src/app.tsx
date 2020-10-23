@@ -1,26 +1,28 @@
-import React, { Suspense, useState, useEffect } from 'react'
+import React, { Suspense, useState } from 'react'
+// import React, { Suspense, useState, useEffect } from 'react'
+// import axios from 'axios'
+
 const ComputedOne = React.lazy(() => import('Components/computed/Computed1'))
 const ComputedTwo = React.lazy(() => import('Components/computed/Computed2'))
-import axios from 'axios'
 
-import('Utils/math').then((math) => {
-  console.log(math.add(1, 2))
-})
+// import('Utils/math').then((math) => {
+//   console.log(math.add(1, 2))
+// })
 
 function App() {
   const [showTwo, setShowTwo] = useState<boolean>(false)
-  const [data, setData] = useState<string>('')
+  // const [data, setData] = useState<string>('')
 
-  function getData() {
-    axios.get('http://127.0.0.1:3000').then((res) => {
-      console.log(res)
-      setData(res.data)
-    })
-  }
+  // function getData() {
+  //   axios.get('http://127.0.0.1:3000').then((res) => {
+  //     console.log(res)
+  //     setData(res.data)
+  //   })
+  // }
 
-  useEffect(() => {
-    getData()
-  })
+  // useEffect(() => {
+  //   getData()
+  // })
 
   return (
     <div className="app">
@@ -30,8 +32,8 @@ function App() {
         <button type="button" onClick={() => setShowTwo(!showTwo)}>
           显示/隐藏Two
         </button>
-        <button onClick={getData}>请求后台数据</button>
-        <>{data}</>
+        {/* <button onClick={getData}>请求后台数据</button> */}
+        {/* <>{data}</> */}
       </Suspense>
     </div>
   )

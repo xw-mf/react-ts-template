@@ -34,7 +34,6 @@ module.exports = {
       node: {
         extensions: ['.tsx', '.ts', '.js', '.json'],
       },
-      typescript: {},
     },
   },
   rules: {
@@ -100,18 +99,17 @@ module.exports = {
 
     'lines-between-class-members': [ERROR, 'always'],
     // indent: [ERROR, 2, { SwitchCase: 1 }],
-    'linebreak-style': [ERROR, 'unix'],
+    // 'linebreak-style': [ERROR, 'unix'],
+    'linebreak-style': [0, 'error', 'windows'],
     quotes: [ERROR, 'single'],
     semi: [ERROR, 'never'],
     'no-unused-expressions': WARN,
     'no-plusplus': OFF,
     'no-console': OFF,
     'class-methods-use-this': ERROR,
-    'jsx-quotes': [ERROR, 'prefer-single'],
+    'jsx-quotes': [ERROR, 'prefer-double'],
     'global-require': OFF,
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error'],
-    // 'jsx-quotes': 'prefer-double',
-    'jsx-quotes': 'prefer-single',
+    '@typescript-eslint/no-use-before-define': 'off',
   },
 }

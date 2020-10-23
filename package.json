@@ -11,23 +11,6 @@
     "lint-stylelint": "stylelint --config .stylelintrc.js src/**/*.{less,css,scss}",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint --config .commitlintrc.js -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js}": [
-      "eslint --config .eslintrc.js"
-    ],
-    "*.{css,less,scss}": [
-      "stylelint --config .stylelintrc.js"
-    ],
-    "*.{ts,tsx,js,json,html,yml,css,less,scss,md}": [
-      "prettier --write"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xw-mf/react-ts-template.git"
